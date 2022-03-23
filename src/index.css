@@ -1,0 +1,706 @@
+Body{
+    background-color:#f8f9fd;
+    margin:0;
+    padding:0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+div#menuLeft{
+    display:block;
+    position:absolute;
+    float:right;
+    height:100%;
+    width:27%;
+    z-index:10;
+}
+.menu-left--hidden{
+    left:-200%;
+    transition:0.6s;
+}
+
+.menu-left-poster{
+    display:block;
+    height: 100%;
+    width:100%;
+    position:absolute;
+    background-image: url(./images/loginposter.png);
+    background-attachment: fixed;
+    background-size:contain;
+    background-repeat: no-repeat;
+    transition:1s;
+}
+.menu-left-sidebar{
+    display:block;
+    position:absolute;
+    height: 100%;
+    width:60%;
+    background-color:rgba(182, 182, 182, 0.671);
+    user-select: none;
+    padding:0;
+    margin:0;
+    backdrop-filter:blur(1.5px);
+    overflow: hidden;
+}
+.menu-left-sidebar>a{
+    display:block;
+    font-family: inherit;
+    font-size: 48px;
+    text-align: center;
+    font-weight: bold;
+    padding:0;
+    margin:0;
+}
+.menu-left-sidebar>ul{
+    list-style: none;
+    display:block;
+    width:100%;
+    float:left;
+    margin-top: 80px;
+}
+.menu-left-sidebar>ul>li{
+    display:block;
+    position:relative;
+    left:-40px;
+    height: 60px;
+
+    padding-left:20px;
+    margin: 0 auto;
+
+    font-family: inherit;
+    text-align: left;
+    font-size: 32px;
+
+    border:solid rgba(92, 92, 92, 0.521);
+    border-width: 0px 0px 0.1px 0px;
+
+    cursor:pointer;
+    transition:0.5s;
+}
+.menu-left-sidebar>ul>li:hover{
+    background: rgba(124, 124, 124, 0.089);
+    text-shadow: 1px 1px 10px #585858;
+    padding-inline-start: 40px;
+    transition:0.2s;
+    color:rgb(76, 43, 226);
+    border-color:rgb(76, 43, 226);
+    border-left:20px solid;
+}
+
+#header {
+    height: 120px;
+    padding:10px 5px 10px 10px;
+    display:block;
+    /* background-color: aqua; */
+}
+
+#header>div.header-login>a{ 
+    font-size: 24px;
+    margin:37px 10px 0 0;
+}
+.header-grid{
+    height:100px;
+    display:inline-grid;
+    grid-template-columns: 2fr;
+    width:50%;
+    overflow:hidden;
+    /* align-items: center; */
+}
+
+.header-grid>div>a{ /*Isardo Main text*/
+    float:left;
+    margin:5px 0px 0 20px;
+    padding:0;
+    font-size:48px;
+    font-weight: bold;
+}
+
+.header-grid--left{
+    float:left;
+    margin:0;
+    padding:0;
+}
+.navbar {
+    list-style: none;
+    display:flex;
+    position:relative;
+    margin: 0 0px 0 0;
+    padding: 13px 0 0 0;
+    float:left;
+    top:0%;
+    left:8%;
+}
+
+.navbar>li{
+    display:block;
+    position:relative;
+    margin: 0 6px 0 0;
+    padding: 7px 0 0 0;
+
+    width:120px;
+    cursor:pointer;
+}
+.navbar>li>a{
+    font-size:28px;
+    font-weight:600;
+    color:grey;
+    font-weight:normal;
+}
+
+.navbar>li>a:active:after{
+    content:'';
+        position:absolute;
+        top:2%;
+        width:28px;
+        height:1px;
+        background:rgb(118, 72, 226);
+        border:1.6px solid rgb(118, 72, 226);
+        border-radius: 1000px;
+}
+.header-grid--right>div.header-login>a{
+    position:relative;
+    display:block;
+    float:right;
+    user-select:none;
+    font-size: 24px;
+    font-family: inherit;
+    font-weight: 500px;
+    margin:37px 10px 0 0;
+}
+.header-grid--right{
+    float:right;
+    /* text-align: right; */
+}
+.image-button{
+    display:block;
+    float:right;
+    position:relative;
+    cursor:pointer;
+    overflow:hidden;
+    text-align: center;
+    top:0%;
+    margin: 20px 40px 40px 0;
+    padding:0;
+    height:50px;
+    width:50px;
+
+    border-radius: 50%;
+}
+.image-button>a{
+    height:100%;
+    width:100%;
+    margin: 0 auto;
+}
+.image-button>a>img{
+display:block;
+height:100%;
+}
+
+
+.user-panel>.user-panel-icon{
+    height:45px;
+    width:45px;
+    cursor:pointer;
+    text-align: center;
+    margin:8px 32px 0 0;
+}
+.user-panel>.user-panel-icon>img{
+
+}
+.user-panel-menu--min>div{
+    height:60px;
+    width: 60px;
+    overflow:hidden;
+    cursor:pointer;
+    text-align: center;
+    margin:2px 0px 0 0;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.348);
+}
+.user-panel-menu--min>div>img{
+    display:block;
+    width:120%;
+    margin-top: -12px;
+    position:relative;
+    float:left;
+}
+.user-panel-menu--min>img{
+    display:inline;
+    position:relative;
+    padding:0;
+    margin: 0 auto;
+    top:-50%;
+    right:-50%;
+    width:30px;
+    height:auto;
+    float:right;
+    cursor:pointer;
+}
+.user-panel--max{
+    display:block;
+    position:absolute;
+    right: -20%;
+    top:80px;
+    z-index:1;
+    transition:0.2s;
+}
+.user-panel--max>ul{
+    list-style: none;
+    display:block;
+    width:100%;
+}
+.user-panel--max>ul>li{
+    display:block;
+    position:relative;
+    text-align: center;
+    margin: 0 auto;
+    font-size:24px;
+    padding:0 10px 0 10px;
+}
+.user-panel--max>ul>li:hover{
+    color:rgb(76, 43, 226);
+    text-shadow: 1px 1px 10px #afa4c5;
+}
+.user-panel--max__visible{
+    top:80px;
+    right: 2%;
+    transition:0.2s;
+}
+
+section#mainSection form.register-form{
+    display: block;
+    position:relative;
+    float:right;
+    text-align:left;
+    user-select:none;
+    padding-top:10px;
+    width:55%;
+    height:100%;
+    z-index:0;
+}
+#mainSection form >h1{
+    font-size:48px;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+#mainSection form >h2{
+    margin-top:12px;
+    font-size:32px;
+    color:grey;
+    font-weight:normal;
+}
+
+.register-form p, .overlay>div>p{
+    color: black;
+    font-family:inherit;
+    font-size:16px;
+    font-weight: bold;
+    margin-top:20px;
+    margin-bottom:0px;
+    position:relative;
+    width:100%;
+    display:block;
+}
+.input-class{
+    width:480px;
+    height:auto;
+    padding:8px;
+    border-radius: 12px;
+    outline:1px rgba(0,0,0,1);
+    border: 1px solid rgba(136, 136, 136, 0.719);
+    font-family:inherit;
+    font-size:20px;
+    color:rgba(136, 136, 136, 0.719);
+    margin: 8px 0 8px 0;
+
+}
+.input-class:focus{
+    outline:1px rgba(0,0,0,1);
+    border: 1px solid rgb(118, 72, 226);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.322);
+    font-family:inherit;
+    font-size:20px; 
+}
+.input-class--active{
+    color:black;
+    font-weight: bold;
+    background-color: white;
+    border-color:rgb(118, 72, 226);
+}
+.input-class--error{
+    background-Color:rgba(228, 52, 52, 0.248);
+	border-Color:rgba(228, 52, 52, 1);
+    transition: 0.3s;
+}
+
+.button-class  {
+    font-family:inherit;
+    font-size: 20px;
+    /* background-color:rgb(76, 43, 226); */
+    padding:12px 34px 12px 34px;
+    border-radius: 30px;
+    color:#fff;
+    cursor:pointer;
+    margin:0;
+    font-weight: lighter;
+    border:none;
+    position:relative;
+    display: block;
+    background-image: linear-gradient(to right, rgb(76, 43, 226) 20%, rgb(81, 71, 214) 60%, rgb(154, 131, 255) 90%);
+    background-size: 200%;
+    background-position:0%;
+    transition: 0.9s;
+}
+.button-class:hover{
+    box-shadow: 0 0 6px rgb(95, 95, 95);
+    color: #2e2e2e;
+    transition: 0.3s;
+    background-position: 100%;
+}
+.button-class:active{
+    background-color:rgb(96, 106, 197);
+    box-shadow: 0 0 8px rgb(43, 43, 43);
+}
+.button-class--header{
+    position: relative;
+    float:right;
+    margin: 30px 35px 12px 12px;
+}
+/* 
+.ui-body {
+    position:absolute;
+    background-color:#f8f9fd;
+    width:100%;
+    Height:100%;
+    user-select:none;
+}
+section.UIBody>a{
+    float:left;
+    margin: 20px 40px 40px 40px;
+    font-family:inherit;
+    font-size:42px;
+    font-weight: bold;
+} */
+
+/* div.MenuUserImage,.CircleIMG{
+    position:relative;
+    overflow:hidden;
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    display:block;
+    float:left;
+} */
+/* section.Menu>div.MenuUserImage>img{
+    width:60px;
+    height:auto;
+    margin-top:-40%;
+    float:left;
+}
+section.UserPanel>section.Menu>div.MenuUserImage:hover{
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.548);
+} */
+a.create-account-external{
+    display:block;
+    float:LEFT;
+    position:relative;
+    width:160px;
+    margin:12px 20px 10px 20px;
+    font-size:16px;
+    color:grey;
+    font-weight:bold;
+}
+.external-account{
+    display:inline;
+    float:right;
+    position:relative;
+    background-color:none;
+    width:35px;
+    height:35px;
+    float:left;
+    margin:10px 0 0 15px;
+    cursor:pointer;
+    border-radius: 20%;
+    background-color: none;
+    transition:0.7s;
+}
+.external-account>a>img{
+    width:100%;
+}
+.external-account:hover{
+    box-shadow: 2px 2px 12px rgb(95, 95, 95);
+    color: #383838;
+    transition:0.25s;
+}
+
+section.main-ui-section{
+    position:absolute;
+    background:white;
+    left:2%;
+    top:16%;
+    width:94%;
+    height:77%;
+    border-radius: 40px;
+    padding:20px;
+}
+
+section.StudentsSheet{
+    display:block;
+    float:left;
+    width:75%;
+    height:100%;
+}
+/* #ContentStudents>.StudentsSheet>button{
+    position:relative;
+    float:left;
+    width:22%;
+    font-weight:500;
+    margin:20px 24px 0 0;
+}
+#ContentStudents>.StudentsSheet>input{
+    float:right;
+    width:22%;
+    font-weight: 500;
+    margin:23px 24px 0 0;
+} */
+section.StudentsList{
+    position:relative;
+    float:left;
+    width:100%;
+    height:75%;
+}
+.main-ui-section-top{
+    height: 80px;
+    width: 60%;
+}
+.main-ui-section-top--full{
+    width: 100%;
+}
+.students-table{
+    position:relative;
+    float:left;
+    width:60%;
+    height:75%;
+    transition: 0.1s;
+}
+.students-table--full{
+    width:100%;
+    transition: 0.1s;
+}
+.students-table>thead{
+    left:20px;
+}
+.students-table>thead>tr>th{
+    text-align:left;
+    padding:30px 0 0 0;
+    line-height: 30px;
+    font-weight:bold;
+    color:#aaa;
+    
+}
+
+.students-table>tbody>tr>td{
+    border-bottom: 1px solid #ddd;
+    width:30%;
+}
+.students-table>tbody>tr>td>a{
+font-size:16px;
+display:inline-block;
+width:180px;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+font-weight:bolder;
+}
+section.student-overview{
+    float:right;
+    width:25%;
+    height:100%;
+    display:block;
+}
+section.StudentsSheet>div.StudentsListPage{
+    float:left;
+    position:relative;
+    left:40%;
+    top:8%;
+}
+section.StudentsSheet>div.StudentsListPage>input.PageNum{
+    text-align:center;
+    height:auto;
+    font-size:16px;
+    width:16px;
+    color:rgb(118, 72, 226);
+}
+.user-image-circle{}
+/* #ContentStudents>.StudentOverview{
+    display:none;
+}
+section.UserDataIMG{
+    width:100%;
+    height:26%;
+    text-align: center;
+}
+section.UserDataIMG>div{
+    height:150px;
+    width:150px;
+    border-radius:50%;
+    margin:0 auto;
+    overflow:hidden;
+    margin-top:20px;
+    box-shadow: 0 0 8px darkgrey;
+}
+section.UserDataIMG>div>img{
+    top:-50%;
+    width:100%;
+}
+section.UserDataNMN>a.StudentName{
+    display:block;
+    width:100%;
+    cursor:unset;
+    text-align:center;
+    font-family: inherit;
+}
+section.UserDataNMN>a.StudentContact{
+    display:block;
+    width:100%;
+    text-align:center;
+    font-family: inherit;
+    font-size:16px;
+    color:rgb(160, 160, 160);
+    line-height: 24px;
+}
+section.UserDataNMN>ul{
+    position:relative;
+    margin:0;
+    width:50%;
+    margin: 0 auto;
+}
+section.UserDataNMN>ul>li{
+    display: inline-block;
+    width:22px;
+    height:22px;
+    position:relative;
+    border:1px solid rgb(175, 175, 175);
+    border-radius:50%;
+    text-align: center;
+    margin-left:4px;
+    left:45px;
+}
+section.StudentOverwiew{
+    height:38%;
+    margin:40px 0 0 30px;
+    font-family: inherit;
+    font-size:20px;
+    font-weight:600;
+}
+section.StudentOverwiew>div.OverviewAllocation{
+    position:relative;
+    float:left;
+    width:90%;
+    height:21%;
+    margin-top:16px;
+    padding:0;
+}
+section.StudentOverwiew>div.OverviewAllocation>div.OverviewIcon{
+    position:relative;
+    float:left;
+    margin:1% 0 0 1%;
+    width:50px;
+    height:50px;
+    border-radius: 12px;
+    outline:1px rgba(0,0,0,1);
+    border: 1px solid rgba(136, 136, 136, 0.719);
+    color:rgba(136, 136, 136, 0.719);
+    
+}
+section.StudentOverwiew>div.OverviewAllocation>div>a.OverviewAssignation{
+top:4px;
+padding-left: 20px;
+position:relative;
+font-size:16px;
+color:rgb(160, 160, 160);
+line-height: 24px;
+font-weight:300;
+}
+section.StudentOverwiew>div.OverviewAllocation>div>a.OverviewData{
+padding-left: 20px;
+position:relative;
+font-size:16px;
+color:black;
+line-height: 24px;
+font-weight:bold;
+margin-bottom:10px;
+}
+section.StudentOverwiew>div.OverviewAllocation>div>a.OverviewData[href$='.jpeg']{
+    color:red;
+    float:left;
+    display:block;
+    background: transparent url(http://simpleicon.com/wp-content/uploads/link-2-64x64.png) center right no-repeat;
+    background-size: 16px;
+    background-position:left;
+    margin-left:16px;
+} */
+.overlay{
+    position:absolute;
+    display:block;
+    visibility:visible;
+    width:100%;
+    height:100%;
+    background-color:rgba(0, 0, 0, 0.459);
+    backdrop-filter:blur(6px);
+    z-index: 100;
+    transition:0.2s;
+}
+.class--hidden{
+    transition:0.15s;
+    opacity: 0;
+    visibility:hidden;
+}
+.overlay>.add-student-form{
+    display:block;
+    position:absolute;
+    height:400px;
+    width:500px;
+    background-color:white;
+    left:30vw;
+    transform: translateY(-30%);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.322);
+    border-radius: 24px;
+    top: 20vw;
+    transition:0.9s;
+    margin: 36px;
+    padding: 30px;
+}
+
+.text-big-bold--purple{
+    float:left;
+    display:block;
+    position:relative;
+    font-size:38px;
+    font-weight:600;
+    color:rgb(118, 72, 226);
+    font-weight:620;
+    width:100%;
+    margin-bottom:40px;
+}
+div.FormData{
+    margin:50px 0 10px 0;
+    float:left;
+    background-color:none;
+    position:relative;
+    width:100%;
+    height:60%;
+}
+div.FormData{
+    font-weight:bold;
+}
+.Exit{
+    position:relative;
+    float:right;
+    text-align: right;
+    padding-right:5%;
+    width:10%;
+    font-family:inherit;
+    font-size:20px;
+    font-weight:bolder;
+    color:black;
+    cursor:pointer;
+}
